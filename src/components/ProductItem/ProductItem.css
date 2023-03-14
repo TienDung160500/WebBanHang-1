@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product-item {
+    padding: 16px;
+    cursor: pointer;
+}
+
+.product-item img {
+    height: 100%;
+    width: 100%;
+}
+
+.product-item a,
+.product-item span {
+    text-transform: uppercase;
+    color: #7F7F7F;
+    font-size: 14px;
+    font-family: "SVN-Futura light", sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+.product-item span {
+    font-size: 16px;
+}

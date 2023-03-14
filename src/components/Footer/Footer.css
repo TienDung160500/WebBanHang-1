@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.foot-content {
+    padding: 100px 0px;
+}
+
+.f-content-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 167rem;
+    position: relative;
+}
+
+.f-catalog-right {
+    width: 50%;
+    padding: 0 24px;
+    font: inherit;
+    vertical-align: baseline;
+    position: relative;
+}
+
+.f-catalog-right h2,
+.f-catalog h2 {
+    text-transform: uppercase;
+    margin-bottom: 37px;
+}
+
+.f-catalog-right .slogan {
+    margin-bottom: 37px;
+    line-height: 20px;
+}
+
+.f-catalog-left {
+    width: 50%;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.f-catalog {
+    width: 25%;
+    padding: 0 24px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.f-catalog-item {
+    margin-bottom: 37px;
+}
+
+.f-catalog-item a {
+    text-decoration: none;
+    padding: 5px;
+    margin-left: -5px;
+    color: #000;
+    font-weight: 1000;
+}
+
+.f-catalog-sp p {
+    margin-bottom: 37px;
+}
+
+.f-catalog-sp p:hover {
+    font-weight: 1000;
+    cursor: pointer;
+}

@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.m-billing-infor {
+    width: 50%;
+    padding: 80px 45px;
+    margin: 0 40px;
+    border-right: 1px solid #47474c;
+}
+
+.m-billing-infor h2 {
+   font-family: "SVN-Futura Medium", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.enter-m-billing-infor {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: "SVN-Futura Medium", sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+}
+
+.m-billing-field {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.m-billing-field input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.m__small-billing-field-name {
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.m__small-billing-field {
+    border-bottom: 1px solid #c0c0c0;
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.m__small-billing-field-location {
+    border-bottom: 1px solid #c0c0c0;
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.name,
+.email,
+.phone-number {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.b-billing-field {
+    display: flex;
+    margin-top: 72px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.billing-feild-form-bot .continue {
+    margin-right: 520px;
+    position: relative;
+    padding-left: 20px;
+    color: #009eff;
+    text-decoration: none;
+}
+
+.billing-feild-form-bot .button-billing-field {
+    position: relative;
+    padding: 5px;
+    width: 170px;
+    cursor: pointer;
+    background-color: #47474c;
+    max-width: 100%;
+    color: #fff;
+    border: 1px solid #47474c;
+    line-height: 1.5;
+    z-index: 1;
+}
+
+:root {
+    --btn-gradient: linear-gradient(to right top);
+  }
+  
+  .bt-button-1 {
+    display: inline-block;
+    padding: 16px 40px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    background-image: var(--btn-gradient);
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+  .bt-button-1:hover::before {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  .bt-button-1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #fff;
+    opacity: 0.1;
+    z-index: -1;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
