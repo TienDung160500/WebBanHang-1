@@ -1,12 +1,23 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { changeValueSearch, search } from "../../store/search/search";
 import "./Header.css";
 
 const Header = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const cart = useSelector((state) => state.cart.cart || []);
   console.log("cart", cart);
+
+  const isSearch = useSelector((state) => state.isSearch)
+
+  const handleChangeInput = (e) => {
+    dispatch(changeValueSearch(e.target.value))
+  }
+
+  const handleSearch = () => {
+    dispatch(search())
+  }
 
   const getTotalQuantity = () => {
     let total = 0;
@@ -65,6 +76,9 @@ const Header = () => {
                   <img
                     src="https://levents.asia/template/assets/images/svg/ic-ser.svg"
                     alt=""
+                    onChange={(e) => handleChangeInput(e)}
+                    value={isSearch.value}
+                    onClick={handleSearch}
                   />
                 </div>
               </div>

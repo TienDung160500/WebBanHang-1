@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+
 const BASE_URL = process.env.REACT_APP_API_KEY;
 
 export const fetchListProductInCart = createAsyncThunk(
