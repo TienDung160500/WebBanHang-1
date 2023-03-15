@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   decrementQuantity,
   incrementQuantity,
+  removeItem,
 } from "../../store/cart/cartSlice";
 import "./CartItem.css";
 
@@ -42,16 +43,23 @@ const CartItem = ({ id, item, quantity = 0 }) => {
 
           <div className="cart-product-item-infor">
             <h3>{item.name}</h3>
+            <strong>{item?.price}</strong>             
             <div className="cart-product-item-infor2">
-              <p>Kích cỡ SIZE 2</p>
-              <button onClick={() => dispatch(decrementQuantity(item.id))}>-</button>
-              <p>{quantity}</p>
-              <button onClick={() => dispatch(incrementQuantity(item.id))}>+</button>
+                <div className="incrDec">
+                  <button onClick={() => dispatch(decrementQuantity(item.id))}>-</button>
+                  <p>{quantity}</p>
+                  <button onClick={() => dispatch(incrementQuantity(item.id))}>+</button>
+                </div>
+                <button 
+              className="removeButton"
+              onClick={() => dispatch(removeItem(id))}>
+                Xóa sản phẩm
+                </button>
             </div>
           </div>
         </div>
 
-        <div className="cart-item">
+        <div className="cart-item2">
           <div className="cart-price-container">
             <div className="c-price-container">
               <p>Tạm tính</p>

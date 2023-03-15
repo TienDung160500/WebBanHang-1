@@ -25,11 +25,11 @@
     display: flex;
     justify-content: space-between;
     line-height: 120px;
-    border-top: 1px solid #474747;
     border-bottom: 1px solid #474747;
 }
 
 .cart-apply-code {
+  padding-top: 40px;
   display: flex;
   justify-content: space-between;
 }
