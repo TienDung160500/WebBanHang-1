@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { changeValueSearch, search } from "../../store/search/search";
@@ -7,16 +9,14 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const cart = useSelector((state) => state.cart.cart || []);
+  const [valueInput, setValueInput] = useState("");
   console.log("cart", cart);
-
-  const isSearch = useSelector((state) => state.isSearch)
-
   const handleChangeInput = (e) => {
-    dispatch(changeValueSearch(e.target.value))
-  }
+    setValueInput(e.target.value);
+  };
 
-  const handleSearch = () => {
-    dispatch(search())
+  function handleSearch(){
+    dispatch(changeValueSearch(valueInput))
   }
 
   const getTotalQuantity = () => {
@@ -69,15 +69,20 @@ const Header = () => {
                 </div>
               </div>
               <div className="header-product">
-                <a href="">Sản phẩm yêu thích</a>
+                <a href="/">Sản phẩm yêu thích</a>
               </div>
               <div className="header-search">
                 <div className="search-btn">
+                  <input
+                    type="text"
+                    onChange={(e) => handleChangeInput(e)}
+                    value={valueInput}
+                    placeholder="Tìm kiếm sản phẩm"
+                  />
                   <img
                     src="https://levents.asia/template/assets/images/svg/ic-ser.svg"
                     alt=""
-                    onChange={(e) => handleChangeInput(e)}
-                    value={isSearch.value}
+                    className="nav-search-btn"
                     onClick={handleSearch}
                   />
                 </div>
@@ -118,7 +123,9 @@ const Header = () => {
                 <a href="">Sản phẩm</a>
               </li>
               <li className="menu-item">
-                <a href="">Giảm giá</a>
+                <a href="" style={{ color: "red" }}>
+                  Giảm giá
+                </a>
               </li>
               <li className="menu-item">
                 <a href="">Bộ sưu tập</a>
