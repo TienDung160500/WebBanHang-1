@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { changeValueSearch, search } from "../../store/search/search";
+import Login from "../LogIn/Login";
 import "./Header.css";
 
 const Header = () => {
@@ -46,8 +47,8 @@ const Header = () => {
             <div className="header-logo">
               <Link to="/">
                 <img
-                  width="98"
-                  height="30"
+                  width={98}
+                  height={30}
                   src="https://levents.asia/wp-content/uploads/2021/10/logo.png"
                   class="custom-logo"
                   alt="Levents"
@@ -102,10 +103,12 @@ const Header = () => {
               </div>
               <div className="header-user">
                 <div className="user-btn">
-                  <img
-                    src="https://levents.asia/template/assets/images/svg/ic-user.svg"
-                    alt=""
-                  />
+                  <Link to="/login">
+                    <img
+                      src="https://levents.asia/template/assets/images/svg/ic-user.svg"
+                      alt=""
+                    />
+                  </Link>
                 </div>
               </div>
             </div>
