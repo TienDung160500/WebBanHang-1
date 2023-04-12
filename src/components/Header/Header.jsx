@@ -5,8 +5,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { changeValueSearch, search } from "../../store/search/search";
 import Login from "../LogIn/Login";
 import "./Header.css";
+import {BellOutlined, DownOutlined, SearchOutlined, ShoppingOutlined, UserOutlined} from "@ant-design/icons"
 
-const Header = () => {
+const 
+Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const cart = useSelector((state) => state.cart.cart || []);
@@ -60,10 +62,7 @@ const Header = () => {
             <div className="header-list">
               <div className="header-noti">
                 <div className="noti-btn" onClick={() => navigate("/cart")}>
-                  <img
-                    src="https://levents.asia/template/assets/images/notification.png"
-                    alt=""
-                  />
+                  <BellOutlined />
                   <div className="noti-num">
                     <p>{getTotalQuantity() || 0}</p>
                   </div>
@@ -80,21 +79,16 @@ const Header = () => {
                     value={valueInput}
                     placeholder="Tìm kiếm sản phẩm"
                   />
-                  <img
-                    src="https://levents.asia/template/assets/images/svg/ic-ser.svg"
-                    alt=""
-                    className="nav-search-btn"
-                    onClick={handleSearch}
-                  />
+                  <SearchOutlined
+                  className="nav-search-btn"
+                  onClick={handleSearch} />
+                  
                 </div>
               </div>
               <div className="header-cart">
                 <div className="cart-btn">
                   <Link to="/cart">
-                    <img
-                      src="https://levents.asia/template/assets/images/svg/ic-cart.svg"
-                      alt=""
-                    />
+                  <ShoppingOutlined />
                   </Link>
                   <div className="cart-num">
                     <p>{getTotalQuantity() || 0}</p>
@@ -104,10 +98,7 @@ const Header = () => {
               <div className="header-user">
                 <div className="user-btn">
                   <Link to="/login">
-                    <img
-                      src="https://levents.asia/template/assets/images/svg/ic-user.svg"
-                      alt=""
-                    />
+                    <UserOutlined />
                   </Link>
                 </div>
               </div>
@@ -123,7 +114,20 @@ const Header = () => {
                 <a href="">Về chúng tôi</a>
               </li>
               <li className="menu-item">
-                <a href="">Sản phẩm</a>
+                <a href="">Cửa hàng</a>
+                <ul className="submenu">
+                  <li><a href="">Tất cả</a></li>
+                  <li><a href="">Sản phẩm mới</a></li>
+                  <li><a href="">Áo</a></li>
+                  <li><a href="">Quần</a></li>
+                  <li><a href="">Áo khoác</a></li>
+                  <li><a href="">Cặp sách</a></li>
+                  <li><a href="">Phụ kiện</a></li>
+                  <li><a href="">Bộ sưu tập</a></li>
+                </ul>
+                <div className="submenu-btn">
+                  <DownOutlined />
+                </div>
               </li>
               <li className="menu-item">
                 <a href="" style={{ color: "red" }}>

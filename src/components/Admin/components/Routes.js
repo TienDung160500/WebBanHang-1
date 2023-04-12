@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Dashboard from "../pages/Dashboard";
 import AdminOrder from "./AdminOrder/AdminOder";
 import AdminCreate from "./AdminProduct/AdminCreate";
@@ -12,7 +12,7 @@ import AppChat from "./Appchat/AppChat";
 
 const Routes = () => {
     return (
-        <Switch>
+        <Routes>
            <Route path="/admin" Component={Dashboard}/> 
            <Route path="/admin/customer" Component={AdminUser}/>
 
@@ -24,7 +24,7 @@ const Routes = () => {
 
            <Route path="/admin/order" Component={AdminOrder}/>
            <Route path="/admin/chat" Component={AppChat}/>
-        </Switch>
+        </Routes>
     )
 }
 

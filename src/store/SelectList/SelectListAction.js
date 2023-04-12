@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL_ADMIN = process.env.BASE_URL_ADMIN;
+const BASE_URL_ADMIN = process.env.REACT_APP_API_ADMIN_KEY;
 
 export const getAllSelectList = () => async (dispatch) => {
     try {

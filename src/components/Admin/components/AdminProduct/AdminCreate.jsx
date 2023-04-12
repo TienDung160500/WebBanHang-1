@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { unstable_HistoryRouter, useFormAction } from "react-router-dom";
 import { getAllTypeProduct } from "../../../../store/ListTypeProduct/ListTypeProduct";
-import { editCurrentPage, saveProduct } from "../../../../store/products/productActions";
+import { editCurrentPage } from "../../../../store/products/productActionAdmin";
+import { saveProduct } from "../../../../store/products/productActions";
 import { getAllSelectList } from "../../../../store/SelectList/SelectListAction";
 
 const AdminCreate = () => {

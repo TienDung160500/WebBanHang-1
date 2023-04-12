@@ -1,3 +1,4 @@
+import { AppstoreOutlined, OrderedListOutlined, ShoppingCartOutlined, UserAddOutlined } from "@ant-design/icons";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
@@ -33,8 +34,35 @@ const Sidebar = () => {
             <div className="sidebar-list">
                 <Link to="/admin" className="sidebar-list-item">
                     <span>
-                        
+                        <AppstoreOutlined />
                     </span>
+                    <p>Dashboard</p>
+                </Link>
+
+                <Link to="/admin/customer" className="sidebar-list-item">
+                    <span>
+                        <UserAddOutlined />
+                    </span>
+                    <p>Customer</p>
+                </Link>
+
+                <Link to="/admin/product" className="sidebar-list-item">
+                    <span>
+                        <ShoppingCartOutlined />
+                    </span>
+                    <p>Products</p>
+                </Link>
+
+                <Link to="/admin/order" className="sidebar-list-item">
+                    <span>
+                        <OrderedListOutlined />
+                    </span>
+                    <p>
+                        Order
+                    <div className="admin-order-new">
+                        {totalNewOrder}
+                    </div>
+                    </p>
                 </Link>
             </div>
         </div>

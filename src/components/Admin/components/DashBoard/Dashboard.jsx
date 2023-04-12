@@ -1,3 +1,10 @@
+import { 
+    BellOutlined, 
+    DollarCircleOutlined, 
+    FileTextOutlined, 
+    SearchOutlined, 
+    ShoppingCartOutlined, 
+    ShoppingOutlined } from "@ant-design/icons";
 import React from "react";
 
 const DashBoard = () => {
@@ -9,7 +16,7 @@ const DashBoard = () => {
                         <form>
                             <input placeholder="Search..."></input>
                             <span>
-
+                                <SearchOutlined />
                             </span>
                         </form>
                     </div>
@@ -19,7 +26,7 @@ const DashBoard = () => {
                             <span>Tran Tien Dung</span>
                         </li>
                         <li className="dashboard-top-content-noti">
-
+                            <BellOutlined />
                         </li>
                     </div>
                 </div>
@@ -29,7 +36,7 @@ const DashBoard = () => {
                         <div className="dashboard-mid-statistic-content">
                             <li>
                                 <div className="dashboard-mid-statistic-icon">
-
+                                    <ShoppingOutlined />
                                 </div>
                                 <div className="dashboard-mid-statistic-title">
                                     <span className="total">1666</span>
@@ -40,7 +47,7 @@ const DashBoard = () => {
                         <div className="dashboard-mid-statistic-content">
                             <li>
                                 <div className="dashboard-mid-statistic-icon">
-
+                                    <ShoppingCartOutlined />
                                 </div>
                                 <div className="dashboard-mid-statistic-title">
                                     <span className="total">25</span>
@@ -51,7 +58,7 @@ const DashBoard = () => {
                         <div className="dashboard-mid-statistic-content">
                             <li>
                                 <div className="dashboard-mid-statistic-icon">
-
+                                    <DollarCircleOutlined />
                                 </div>
                                 <div className="dashboard-mid-statistic-title">
                                     <span className="total">2000</span>
@@ -62,7 +69,7 @@ const DashBoard = () => {
                         <div className="dashboard-mid-statistic-content">
                             <li>
                                 <div className="dashboard-mid-statistic-icon">
-
+                                    <FileTextOutlined />
                                 </div>
                                 <div className="dashboard-mid-statistic-title">
                                     <span className="total">1208</span>

@@ -1,31 +1,34 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Route, Router, Routes, unstable_HistoryRouter } from "react-router-dom";
+import { Route, useNavigate } from "react-router-dom";
+import Routes from "./components/Routes";
 import Sidebar from "./components/SideBar/SideBar";
+import "./Admin.css"
 
 const Admin = () => {
     const userSignin = useSelector((state) => state.userSignin);
     const {userInfor} = userSignin;
-    const history = unstable_HistoryRouter();
+    const navigate = useNavigate();
 
     if (!userInfor || !userInfor.isAdmin ) {
-        history.push("/")
+        navigate("/")
     }
+    
 
     return (
-        <Router>
+        <Routes>
             <Route
-            render={(props) => (
+            render={() => (
                 <div className={`layout`}>
                     <Sidebar />
                     <div className="layout_content">
                         <div className="layout_content_main">
-                            <Routes/>
+                            <Routes />
                         </div>
                     </div>
                 </div>
             )} ></Route>
-        </Router>
+        </Routes>
     );
 }
 

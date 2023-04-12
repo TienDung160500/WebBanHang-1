@@ -6,6 +6,7 @@ import AdminPage from "../pages/AdminPage";
 import CartPage from "../pages/cart";
 import LoginPage from "../pages/LogInPage";
 
+
 const routerName = createBrowserRouter([
     {
         path: "/",

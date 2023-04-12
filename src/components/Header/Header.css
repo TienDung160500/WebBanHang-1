@@ -114,12 +114,14 @@
     display: block;
 }
 
-.noti-btn img,
-.cart-btn img {
+.noti-btn span,
+.cart-btn span,
+.user-btn span {
     width: 20px;
     height: auto;
     max-width: 100%;
     vertical-align: middle;
+    color: #000;
 }
 
 .noti-num p {
@@ -234,8 +236,40 @@
     width: 100%;
 }
 
-.banner img{
+.submenu > li {
+    /* display: none; */
     position: relative;
+    opacity: 1;
+    pointer-events: auto;
+    list-style: none;
+    cursor: pointer;
+}
+
+.main-menu li:hover .submenu {
+    display: block;
+    position: relative;
+}
+
+.main-menu .submenu-btn {
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    transform: translate(80px, -195px);
+}
+
+.main-menu > .submenu-btn > a {
+    display: block;
+    padding: 13px 15px;
+    font-weight: 300;
+    position: relative;
+    line-height: 21px;
+    cursor: pointer;
+}
+
+.banner img{
+    position: static;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -247,6 +281,7 @@
     display: flex;
     transition-property: transform;
     box-sizing: content-box;
+    /* display: none; */
 }
 
 .banner-btn {
