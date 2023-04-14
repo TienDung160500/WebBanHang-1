@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GetAllUser } from "../../../../store/user/UserAction";
 import ListUser from "./ListUser"
+import "./AdminUser.css"
 
 const AdminUser = () => {
     const dispatch = useDispatch();

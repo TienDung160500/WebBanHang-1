@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { GetAllOrderPendding } from "../../../../store/order/OrderAction";
+import "./SideBar.css";
 
 const Sidebar = () => {
     const dispatch = useDispatch();

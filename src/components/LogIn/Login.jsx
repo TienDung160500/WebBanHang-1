@@ -2,7 +2,7 @@ import { Checkbox } from "antd";
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
-import { Link, useFormAction, useHref } from "react-router-dom";
+import { Link, useHref } from "react-router-dom";
 import { login } from "../../store/user/UserAction";
 import "./Login.css"
 import firebase from 'firebase/compat/app';
@@ -19,6 +19,12 @@ firebase.initializeApp(config);
 const Login = () => {
     const dispatch = useDispatch();
     const history = useHref();
+
+    // const [token, setToken] = useState();
+
+    // if(!token) {
+    //     return <Login setToken={setToken}/>
+    // }
 
     const uiConfig = {
         // Popup signin flow rather than redirect flow.
@@ -41,12 +47,8 @@ const Login = () => {
                     console.log("user not logged in");
                     return;
                 }
-
-                console.log("loggin user", user.name)
-
-                const token = await user.getIdToken();
-                console.log("loggin user", token)
-
+                console.log({ user: user.email });
+                console.log({ user })
             });
             return () => unregisterAuthObserver();
         }, []);
@@ -58,7 +60,7 @@ const Login = () => {
         // watch,
         // formState: {},
 
-    } = useFormAction();
+    } = useState();
 
     const user = useSelector((state) => state.userSignin);
     const {userInfor, error} = user;

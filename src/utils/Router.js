@@ -33,7 +33,7 @@ const routerName = createBrowserRouter([
     },
 
     {
-        path: "/admin",
+        path: "/admin/",
         element: <AdminPage />,
         errorElement: <ErrorPage />
     }

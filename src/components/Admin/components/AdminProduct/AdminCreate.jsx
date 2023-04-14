@@ -11,7 +11,7 @@ const AdminCreate = () => {
     const dispatch = useDispatch();
     const history = unstable_HistoryRouter();
 
-    const [imgae, setImgae] = useState("");
+    const [image, setImgae] = useState("");
     const [activeTypeProduct, setActiveTypeProduct] = useState("");
     const SelectList = useSelector(state => state.selectList.List);
     const { page } = useSelector((state) => state.allProduct.product);

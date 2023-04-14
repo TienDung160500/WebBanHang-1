@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { BlogProduct, getProductById } from "../../../../../store/products/productActionAdmin";
+import "./ReviewProduct.css"
 
 const ReviewProduct = () => {
     const {id} = useParams();
