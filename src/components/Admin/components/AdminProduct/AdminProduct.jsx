@@ -2,9 +2,9 @@ import { AppstoreAddOutlined, ToolOutlined } from "@ant-design/icons";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { paginationProduct } from "../../../../store/products/productActionAdmin";
 import ListProduct from "./ListProduct"
 import "./AdminProduct.css"
+import { paginationProduct } from "../../../../store/products/productActionAdmin";
 
 const AdminProduct = () => {
     const dispatch = useDispatch();

@@ -6,7 +6,7 @@ const User = (props) => {
     const {user, number} = props;
     const dispatch = useDispatch();
     const handleDeleteUser = async (user) => {
-        await dispatch (deleteUser(user._id))
+        dispatch(deleteUser(user._id))
         dispatch(GetAllUser())
     }
 

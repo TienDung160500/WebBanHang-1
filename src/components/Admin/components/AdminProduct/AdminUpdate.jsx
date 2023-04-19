@@ -5,12 +5,10 @@ import {
   useFormAction,
   useParams,
 } from "react-router-dom";
-import {
-  getProductById,
-  removeProductById,
-  saveProduct,
-} from "../../../../../store/products/productActionAdmin";
-import { getAllSelectList } from "../../../../../store/SelectList/SelectListAction";
+import { getProductById, removeProductById, saveProduct } from "../../../../store/products/productActionAdmin";
+import { getAllSelectList } from "../../../../store/SelectList/SelectListAction";
+
+
 
 const AdminUpdate = () => {
   const { register, handleSubmit } = useFormAction();
