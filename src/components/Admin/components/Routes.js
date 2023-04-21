@@ -1,6 +1,5 @@
 import React from "react";
-import { BrowserRouter, createBrowserRouter, Route, Routes } from "react-router-dom";
-import Dashboard from "../pages/Dashboard";
+import { createBrowserRouter } from "react-router-dom";
 import AdminOrder from "./AdminOrder/AdminOder";
 import AdminCreate from "./AdminProduct/AdminCreate";
 import AdminProduct from "./AdminProduct/AdminProduct";
@@ -28,9 +27,9 @@ const Routess = createBrowserRouter([
     //     </Routes>
 
     // )
-    
+    // Xoá file này đi không cần nữa đâu
     {
-        path: "/admin/dasboard",
+        path: "/admin/",
         element: <DashBoard />,
         children: [
             {
@@ -69,7 +68,7 @@ const Routess = createBrowserRouter([
             },
 
             {       
-                path: "/admin/chat/",
+                path: "chat/",
                 element:<AppChat/>,
             },
         ]

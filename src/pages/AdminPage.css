@@ -1,0 +1,12 @@
+.admin {
+  width: 100%;
+  display: flex;
+}
+
+.admin-sidebar {
+  width: 20%;
+}
+
+.admin-content {
+  width: 80%;
+}

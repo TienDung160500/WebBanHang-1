@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import AdminOrder from "../components/Admin/components/AdminOrder/AdminOder";
 import AdminCreate from "../components/Admin/components/AdminProduct/AdminCreate";
 import AdminProduct from "../components/Admin/components/AdminProduct/AdminProduct";
@@ -7,6 +7,7 @@ import DataFilterProduct from "../components/Admin/components/AdminProduct/DataF
 import ReviewProduct from "../components/Admin/components/AdminProduct/ReviewProduct/ReviewProduct";
 import AdminUser from "../components/Admin/components/AdminUser/AdminUser";
 import AppChat from "../components/Admin/components/Appchat/AppChat";
+import DashBoard from "../components/Admin/components/DashBoard/Dashboard";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Register from "../components/SignUp/SignUp";
 import Home from "../pages";
@@ -21,7 +22,6 @@ const routerName = createBrowserRouter([
         element: <Home />,
         errorElement: <ErrorPage />
     },
-
     {
         path: "/cart",
         element: <CartPage />,
@@ -41,47 +41,51 @@ const routerName = createBrowserRouter([
     },
 
     {
-        path: "/admin",
+        path: "admin",
         element: <AdminPage />,
         errorElement: <ErrorPage />,
         children: [
+            {  
+                index: true,
+                element: <Navigate to={"dashboard"}  />
+            },
+            {  
+                path: "dashboard",
+                element: <DashBoard />
+            },
             {
-                path: "customer/",
+                path: "dashboard/customer",
                 element: <AdminUser />
             },
-
             {
-                path: "product/create/",
+                path: "dashboard/product",
+                element:<AdminProduct/>,
+            },
+            {
+                path: "dashboard/product/create",
                 element:<AdminCreate/>,
             },
-
             {
-                path: "product/update/infor/",
+                path: "dashboard/product/update/infor",
                 element:<DataFilterProduct/>,
             },
 
             {
-                path: "product/update/:id/",
+                path: "dashboard/product/update/:id",
                 element:<AdminUpdate/>,
             },
 
             {
-                path: "product/reviewProduct/:id/",
+                path: "dashboard/product/reviewProduct/:id",
                 element:<ReviewProduct/>,
             },
-
             {
-                path: "product/",
-                element:<AdminProduct/>,
-            },
-
-            {
-                path: "order/",
+                path: "dashboard/order",
                 element:<AdminOrder/>,
             },
 
             {       
-                path: "/admin/chat/",
+                path: "dashboard/chat",
                 element:<AppChat/>,
             },
         ]
