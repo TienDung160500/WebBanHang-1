@@ -80,15 +80,15 @@ Header = () => {
                     placeholder="Tìm kiếm sản phẩm"
                   />
                   <SearchOutlined
-                  className="nav-search-btn"
-                  onClick={handleSearch} />
-                  
+                    className="nav-search-btn"
+                    onClick={handleSearch}
+                  />
                 </div>
               </div>
               <div className="header-cart">
                 <div className="cart-btn">
                   <Link to="/cart">
-                  <ShoppingOutlined />
+                    <ShoppingOutlined />
                   </Link>
                   <div className="cart-num">
                     <p>{getTotalQuantity() || 0}</p>
@@ -114,20 +114,38 @@ Header = () => {
                 <a href="">Về chúng tôi</a>
               </li>
               <li className="menu-item">
-                <a href="">Cửa hàng</a>
+                <a href="">
+                  Cửa hàng
+                  <div className="submenu-btn">
+                    <DownOutlined />
+                  </div>
+                </a>
                 <ul className="submenu">
-                  <li><a href="">Tất cả</a></li>
-                  <li><a href="">Sản phẩm mới</a></li>
-                  <li><a href="">Áo</a></li>
-                  <li><a href="">Quần</a></li>
-                  <li><a href="">Áo khoác</a></li>
-                  <li><a href="">Cặp sách</a></li>
-                  <li><a href="">Phụ kiện</a></li>
-                  <li><a href="">Bộ sưu tập</a></li>
+                  <li>
+                    <a href="">Tất cả</a>
+                  </li>
+                  <li>
+                    <a href="">Sản phẩm mới</a>
+                  </li>
+                  <li>
+                    <a href="">Áo</a>
+                  </li>
+                  <li>
+                    <a href="">Quần</a>
+                  </li>
+                  <li>
+                    <a href="">Áo khoác</a>
+                  </li>
+                  <li>
+                    <a href="">Cặp sách</a>
+                  </li>
+                  <li>
+                    <a href="">Phụ kiện</a>
+                  </li>
+                  <li>
+                    <a href="">Bộ sưu tập</a>
+                  </li>
                 </ul>
-                <div className="submenu-btn">
-                  <DownOutlined />
-                </div>
               </li>
               <li className="menu-item">
                 <a href="" style={{ color: "red" }}>
@@ -141,13 +159,23 @@ Header = () => {
                 <a href="">Bộ phối</a>
               </li>
               <li className="menu-item">
-                <a href="">Bài viết</a>
+                <a href="">
+                  Bài viết
+                  <div className="submenu-btn">
+                    <DownOutlined />
+                  </div>
+                </a>
               </li>
               <li className="menu-item">
                 <a href="">Liên hệ</a>
               </li>
               <li className="menu-item">
-                <a href="">Chăm sóc khách hàng</a>
+                <a href="">
+                  Chăm sóc khách hàng
+                  <div className="submenu-btn">
+                    <DownOutlined />
+                  </div>
+                </a>
               </li>
               <li className="menu-item">
                 <a href="">Tuyển dụng</a>
