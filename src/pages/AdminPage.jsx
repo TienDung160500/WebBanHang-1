@@ -3,23 +3,23 @@ import { useSelector } from "react-redux";
 import { Outlet, useNavigate } from "react-router-dom";
 import Sidebar from "../components/Admin/components/SideBar/SideBar";
 import "./AdminPage.css";
-import firebase from "firebase/compat/app";
-import { useAuthState } from "react-firebase-hooks/auth";
-import Login from "../components/LogIn/Login";
-import { useDocumentData } from "react-firebase-hooks/firestore";
-import { getFirestore } from "firebase/firestore";
-import { initializeApp } from "firebase/app";
+// import firebase from "firebase/compat/app";
+// import { useAuthState } from "react-firebase-hooks/auth";
+// import Login from "../components/LogIn/Login";
+// import { useDocumentData } from "react-firebase-hooks/firestore";
+// import { getFirestore } from "firebase/firestore";
+// import { initializeApp } from "firebase/app";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCQR2MJow5pHq2lZ8GoCWLLPEJPgJqFggc",
-  authDomain: "admins-28ca4.firebaseapp.com",
-  projectId: "admins-28ca4",
-  storageBucket: "admins-28ca4.appspot.com",
-  messagingSenderId: "454969152458",
-  appId: "1:454969152458:web:b6773bc7f6a51c814ef533",
-  measurementId: "G-TP3EJX9TQT"
-};
-firebase.initializeApp(firebaseConfig);
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCQR2MJow5pHq2lZ8GoCWLLPEJPgJqFggc",
+//   authDomain: "admins-28ca4.firebaseapp.com",
+//   projectId: "admins-28ca4",
+//   storageBucket: "admins-28ca4.appspot.com",
+//   messagingSenderId: "454969152458",
+//   appId: "1:454969152458:web:b6773bc7f6a51c814ef533",
+//   measurementId: "G-TP3EJX9TQT"
+// };
+// firebase.initializeApp(firebaseConfig);
 
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
@@ -44,9 +44,9 @@ firebase.initializeApp(firebaseConfig);
 // const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
-const auth = firebase.auth();
-const app = initializeApp(firebaseConfig);
-export const firestore = getFirestore(app);
+// const auth = firebase.auth();
+// const app = initializeApp(firebaseConfig);
+// export const firestore = getFirestore(app);
 
 const AdminPage = () => {
   const userSignin = useSelector((state) => state.userSignin);
@@ -59,42 +59,42 @@ const AdminPage = () => {
 
   // Check admin
 
-  const [user] = useAuthState(auth);
-  const [userData, loading] = useDocumentData(
-    firestore.collection("users").doc(user?.uid)
-  );
+  // const [user] = useAuthState(auth);
+  // const [userData, loading] = useDocumentData(
+  //   firestore.collection("users").doc(user?.uid)
+  // );
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  // if (loading) {
+  //   return <p>Loading...</p>;
+  // }
 
-  const adminEmail = "tiendung@gmai.com";
+  // const adminEmail = "tiendung@gmail.com";
 
-  const isAdmin = userData?.email === adminEmail;
+  // const isAdmin = userData?.email === adminEmail;
   
   
-  // const user = firebase.auth().currentUser;
+  // // const user = firebase.auth().currentUser;
 
-  if (user) {
-    user
-      .getIdTokenResult()
-      .then((idTokenResult) => {
-        const isAdmin = !!idTokenResult.claims.admin;
-        console.log(`Is admin? ${isAdmin}`);
-         if (isAdmin) {
-           // User is an admin, allow access to admin features.
-         } else {
-           // User is not an admin, restrict access to admin features.
-         }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
+  // if (user) {
+  //   user
+  //     .getIdTokenResult()
+  //     .then((idTokenResult) => {
+  //       const isAdmin = !!idTokenResult.claims.admin;
+  //       console.log(`Is admin? ${isAdmin}`);
+  //        if (isAdmin) {
+  //          // User is an admin, allow access to admin features.
+  //        } else {
+  //          // User is not an admin, restrict access to admin features.
+  //        }
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // }
 
   return (
     <>
-      <div>
+      {/* <div>
         
         {user ? (
           <div>
@@ -108,7 +108,7 @@ const AdminPage = () => {
         ) : (
           <Login />
         )}
-      </div>
+      </div> */}
 
       <div className="admin">
         <div className="admin-sidebar">
